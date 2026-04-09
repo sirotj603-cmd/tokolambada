@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusat Bantuan - Clone</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'open sans', sans-serif; margin: 0; padding: 0; }
+        body { background-color: #fff; color: #333; }
+
+        /* --- Hero Section --- */
+        .hero {
+            background-color: #f8f8f8;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 28px; margin-bottom: 20px; color: #212121; }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #e5e7e9;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* --- Category Grid --- */
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        .section-title { font-weight: bold; margin-bottom: 20px; font-size: 18px; }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .help-card {
+            border: 1px solid #e5e7e9;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        .help-card:hover {
+            border-color: #03ac0e;
+            box-shadow: 0 4px 12px rgba(3, 172, 14, 0.1);
+        }
+        .icon { font-size: 40px; margin-bottom: 10px; display: block; }
+        .help-card h3 { font-size: 16px; margin-bottom: 8px; }
+        .help-card p { font-size: 13px; color: #6d7588; }
+
+        /* --- FAQ Section --- */
+        .faq-list { margin-top: 40px; list-style: none; }
+        .faq-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .faq-item:hover { color: #03ac0e; }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>Ada yang bisa kami bantu?</h1>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Tuliskan kendala Anda di sini...">
+        </div>
+    </section>
+
+    <div class="container">
+        <p class="section-title">Pilih Kategori Masalah</p>
+        <div class="help-grid">
+            <a href="#" class="help-card">
+                <span class="icon">📦</span>
+                <h3>Pesanan</h3>
+                <p>Lacak posisi, konfirmasi, atau batalkan pesanan.</p>
+            </a>
+            <a href="#" class="help-card">
+                <span class="icon">💳</span>
+                <h3>Pembayaran</h3>
+                <p>Masalah tagihan, kartu kredit, atau OVO.</p>
+            </a>
+            <a href="#" class="help-card">
+                <span class="icon">👤</span>
+                <h3>Akun Saya</h3>
+                <p>Ubah profil, kata sandi, atau keamanan akun.</p>
+            </a>
+            <a href="#" class="help-card">
+                <span class="icon">🚚</span>

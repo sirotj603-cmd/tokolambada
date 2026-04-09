@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokoLambada - Siap Pakai</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+        body { background-color: #f4f4f4; color: #31353B; }
+
+        /* --- Header --- */
+        header {
+            background: #fff;
+            padding: 10px 5%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+        }
+        .logo { color: #03ac0e; font-weight: bold; font-size: 24px; text-decoration: none; }
+        .search-bar { 
+            flex-grow: 1; 
+            padding: 10px 15px; 
+            border: 1px solid #e5e7e9; 
+            border-radius: 8px; 
+            outline: none; 
+            font-size: 14px;
+        }
+        .menu { font-size: 14px; color: #6d7588; cursor: pointer; font-weight: 600; }
+
+        /* --- Main Content --- */
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #03ac0e, #1ed760);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        /* Product Card */
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none; /* Menghilangkan underline jika pakai tag <a> */
+            color: inherit;
+        }
+        
+        .card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Area Foto Produk */
+        .card-img { 
+            width: 100%; 
+            aspect-ratio: 1 / 1; /* Membuat kotak foto persegi sempurna 1:1 */
+            background: #f8f8f8;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Foto akan otomatis menyesuaikan kotak tanpa gepeng */
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.05); /* Efek zoom sedikit saat hover */
+        }
+
+        /* Info Produk */
+        .card-info { padding: 10px; flex-grow: 1; display: flex; flex-direction: column; }
+        
+        .p-name { 
+            font-size: 14px; 
+            line-height: 1.4;
+            height: 40px; /* Batasi tinggi teks */
+            overflow: hidden; 
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Potong teks jadi 2 baris saja */
+            -webkit-box-orient: vertical;
+            margin-bottom: 4px;
+            color: #212121;
+        }
+
+        .p-price { 
+            font-weight: 700; 
+            color: #fa591d; 
+            font-size: 16px; 
+            margin-bottom: 8px; 
+        }
+
+        .p-shop { 
+            font-size: 12px; 
+            color: #6d7588; 
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .rating {
+            font-size: 11px;
+            color: #6d7588;
+            margin-top: 6px;
+        }
+
+        .star { color: #ffc400; font-size: 12px; }
+
+        /* Responsive Mobile */
+        @media (max-width: 600px) {
+            header { padding: 10px 15px; }
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .banner { height: 120px; font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">TokoLambada</a>
+        <input type="text" class="search-bar" placeholder="Cari di TokoLambada">
+        <div class="menu">🛒 | Masuk | Daftar</div>
+    </header>
+
+    <div class="container">
+        <div class="banner">
+            Promo Menarik Hari Ini!
+        </div>
+
+        <h3 style="margin-bottom: 15px;">Terlaris Untukmu</h3>
+
+        <div class="product-grid">
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://cdn.polytron.co.id/public-assets/polytroncoid/2025/12/NEW-ECOM-SKU-PLD-75UG5959-1.jpg" alt="Produk 1">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Sepatu Sneakers Sport Running Red Edition Premium</p>
+                    <p class="p-price">Rp250.000</p>
+                    <p class="p-shop">📍 Jakarta Pusat</p>
+                    <div class="rating"><span class="star">★</span> 4.9 | Terjual 2rb+</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://falconaircondition.com/wp-content/uploads/2022/10/split-1-scaled.jpg" alt="Produk 2">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Smartwatch Silver Elegant Series - Water Resistant</p>
+                    <p class="p-price">Rp1.200.000</p>
+                    <p class="p-shop">📍 Bandung</p>
+                    <div class="rating"><span class="star">★</span> 4.8 | Terjual 500+</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://cdn.polytron.co.id/public-assets/polytroncoid/2025/03/L1546raj-1-.-1-copy.jpg" alt="Produk 3">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Headphone Bluetooth Bass Boosted - Studio Quality</p>
+                    <p class="p-price">Rp450.000</p>
+                    <p class="p-shop">📍 Surabaya</p>
+                    <div class="rating"><span class="star">★</span> 5.0 | Terjual 1rb+</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://advancedigitals.co.id/wp-content/uploads/2024/06/1-8.jpg" alt="Produk 4">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Sepatu Klasik Casual High Top - Black & White</p>
+                    <p class="p-price">Rp320.000</p>
+                    <p class="p-shop">📍 Medan</p>
+                    <div class="rating"><span class="star">★</span> 4.7 | Terjual 800+</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://img.lazcdn.com/g/p/fe6fdc502029b401ee8c208fb700490b.jpg_720x720q80.jpg" alt="Produk 5">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Kipas Angin / StandFan MASPION EX-1611 SX 16 inch 100%</p>
+                    <p class="p-price">Rp185.000</p>
+                    <p class="p-shop">📍 Tangerang</p>
+                    <div class="rating"><span class="star">★</span> 4.9 | Terjual 3rb+</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

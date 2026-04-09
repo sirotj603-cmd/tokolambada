@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokoLambada - Siap Pakai</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+        body { background-color: #f4f4f4; color: #31353B; }
+
+        /* --- Header --- */
+        header {
+            background: #fff;
+            padding: 10px 5%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+        }
+        .logo { color: #03ac0e; font-weight: bold; font-size: 24px; text-decoration: none; }
+        .search-bar { 
+            flex-grow: 1; 
+            padding: 10px 15px; 
+            border: 1px solid #e5e7e9; 
+            border-radius: 8px; 
+            outline: none; 
+            font-size: 14px;
+        }
+        .menu { font-size: 14px; color: #6d7588; cursor: pointer; font-weight: 600; }
+
+        /* --- Main Content --- */
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+
+        /* Banner */
+        .banner {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #03ac0e, #1ed760);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        /* Product Card */
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.12);
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none; /* Menghilangkan underline jika pakai tag <a> */
+            color: inherit;
+        }
+        
+        .card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Area Foto Produk */
+        .card-img { 
+            width: 100%; 
+            aspect-ratio: 1 / 1; /* Membuat kotak foto persegi sempurna 1:1 */
+            background: #f8f8f8;
+            overflow: hidden;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Foto akan otomatis menyesuaikan kotak tanpa gepeng */
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-img img {
+            transform: scale(1.05); /* Efek zoom sedikit saat hover */
+        }
+
+        /* Info Produk */
+        .card-info { padding: 10px; flex-grow: 1; display: flex; flex-direction: column; }
+        
+        .p-name { 
+            font-size: 14px; 
+            line-height: 1.4;
+            height: 40px; /* Batasi tinggi teks */
+            overflow: hidden; 
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Potong teks jadi 2 baris saja */
+            -webkit-box-orient: vertical;
+            margin-bottom: 4px;
+            color: #212121;
+        }
+
+        .p-price { 
+            font-weight: 700; 
+            color: #fa591d; 
+            font-size: 16px; 
+            margin-bottom: 8px; 
+        }
+
+        .p-shop { 
+            font-size: 12px; 
+            color: #6d7588; 
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .rating {
+            font-size: 11px;
+            color: #6d7588;
+            margin-top: 6px;
+        }
+
+        .star { color: #ffc400; font-size: 12px; }
+
+        /* Responsive Mobile */
+        @media (max-width: 600px) {
+            header { padding: 10px 15px; }
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .banner { height: 120px; font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">TokoLambada</a>
+        <input type="text" class="search-bar" placeholder="Cari di TokoLambada">
+        <div class="menu">🛒 | Masuk | Daftar</div>
+    </header>
+
+    <div class="container">
+        <div class="banner">
+            Promo Menarik Hari Ini!
+        </div>
+
+        <h3 style="margin-bottom: 15px;">Terlaris Untukmu</h3>
+
+        <div class="product-grid">
+            
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR6mOxmyieV5L-dtGMIcMAFE5YZBhZc-_Ktg&s" alt="Produk 1">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">SEPATU BOLA ADIDAS F50 LEAGUE LL FG/MG IE0606 / 20242</p>
+                    <p class="p-price">1.400.000</p>
+                    <p class="p-shop">📍 Jakarta Pusat</p>
+                    <div class="rating"><span class="star">★</span> 4.9 | Terjual 2rb+</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://down-id.img.susercontent.com/file/id-11134207-7rasm-m3u9w4nvu8wvf6" alt="Produk 2">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">Treadmill Manual MultiFungsi Treadmill 9 in 1-Alat Fitness Termurah/Treadmill yang tidak menggunakan listrik</p>
+                    <p class="p-price">Rp889.000</p>
+                    <p class="p-shop">📍 Bandung</p>
+                    <div class="rating"><span class="star">★</span> 4.8 | Terjual 500+</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR34HFT_jPogLYJa7xHE0_Kf1hGHOQOmWbSwg&s" alt="Produk 3">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">HTD SPORT Air Walker Climber Elliptical Trainer Freestyle Glider Alat Olahraga Fitnes Gym KM606 KM607</p>
+                    <p class="p-price">Rp1.796.000</p>
+                    <p class="p-shop">📍 Surabaya</p>
+                    <div class="rating"><span class="star">★</span> 5.0 | Terjual 1rb+</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://upload.jaknot.com/2023/11/images/products/dfc34f/original/taffsport-alat-fitness-pull-up-power-rack-horizonal-bar-home-gym-4001f.jpg" alt="Produk 4">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">TaffSPORT Alat Fitness Pull Up Power Rack Horizonal Bar Home Gym - 4001F - Black</p>
+                    <p class="p-price">Rp724.000</p>
+                    <p class="p-shop">📍 Medan</p>
+                    <div class="rating"><span class="star">★</span> 4.7 | Terjual 800+</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img">
+                    <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/113/MTA-177982196/bg_sepeda_statis_kualitas_gym_alat_olah_raga_rumahan_spin_bike_elite_full07_qvjy8y75.jpg" alt="Produk 5">
+                </div>
+                <div class="card-info">
+                    <p class="p-name">SEPEDA STATIS KUALITAS GYM ALAT OLAH RAGA RUMAHAN SPIN BIKE ELITE</p>
+                    <p class="p-price">Rp1.250.000</p>
+                    <p class="p-shop">📍 Tangerang</p>
+                    <div class="rating"><span class="star">★</span> 4.9 | Terjual 3rb+</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

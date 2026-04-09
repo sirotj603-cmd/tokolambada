@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar | TOKO LAMBADA</title>
+    <style>
+        * { box-sizing: border-box; font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; }
+        body { 
+            background-color: #ffffff; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- Header Logo --- */
+        header { padding: 30px; }
+        .logo { color: #03ac0e; font-size: 32px; font-weight: bold; text-decoration: none; }
+
+        /* --- Container Daftar --- */
+        .signup-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2 { font-size: 22px; margin-bottom: 8px; color: #333; }
+        p { font-size: 14px; color: #6d7588; margin-bottom: 25px; }
+
+        /* --- Form --- */
+        .form-group { text-align: left; margin-bottom: 20px; }
+        label { font-size: 13px; font-weight: bold; color: #6d7588; display: block; margin-bottom: 5px; }
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e5e7e9;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+        }
+        input:focus { border-color: #03ac0e; }
+
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background-color: #03ac0e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .btn-submit:disabled { background-color: #e5e7e9; cursor: not-allowed; }
+
+        /* --- Divider --- */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            color: #b5bbc5;
+            font-size: 12px;
+        }
+        .divider::before, .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #e5e7e9;
+            margin: 0 10px;
+        }
+
+        /* --- Sosmed Daftar --- */
+        .btn-google {
+            width: 100%;
+            padding: 12px;
+            background: white;
+            border: 1px solid #e5e7e9;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .footer-text { font-size: 13px; color: #6d7588; margin-top: 20px; }
+        .footer-text a { color: #03ac0e; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">TOKO LAMBADA</a>
+    </header>
+
+    <div class="signup-container">
+        <h2>Daftar Sekarang</h2>
+        <p>Sudah punya akun Toko Lambada? <a href="#" style="color: #03ac0e; text-decoration: none;">Masuk</a></p>
+
+        <form>
+            <div class="form-group">
+                <label>Nomor HP atau Email</label>
+                <input type="text" placeholder="Contoh:ahamadsirojuddinsiroj@email.com">
+            </div>
+
+            <button type="submit" class="btn-submit">Daftar</button>
+        </form>
+
+        <div class="divider">atau daftar melalui</div>
+
+        <button class="btn-google">
+            <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" width="18" alt="G">
+            Google
+        </button>
+
+        <p class="footer-text">
+            Dengan mendaftar, saya menyetujui <br>
+            <a href="#">Syarat & Ketentuan</a> serta <a href="#">Kebijakan Privasi</a>.
+        </p>
+    </div>
+
+</body>
+</html>
